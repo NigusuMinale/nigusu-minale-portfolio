@@ -1,0 +1,6 @@
+{
+  "name": "Nigusu Minale - Portfolio",
+  "description": "Personal portfolio website for Nigusu Minale featuring full-stack projects, interactive AI assistant, tech stack, experience timeline, and contact form.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
