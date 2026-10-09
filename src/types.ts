@@ -10,7 +10,7 @@ export interface Project {
   longDescription: string;
   problemStatement: string;
   solutionArchitecture: string;
-  keyMetrics: string[];
+  keyMetrics?: string[];
   techStack: string[];
   liveUrl?: string;
   githubUrl?: string;
@@ -23,8 +23,8 @@ export interface SkillCategory {
   iconName: string;
   skills: {
     name: string;
-    level: number; // 1-100
-    experienceYears: string;
+    level?: number; // 1-100, optional to avoid fake mastery percentages
+    experienceYears?: string;
     highlight?: boolean;
     icon?: string;
   }[];
