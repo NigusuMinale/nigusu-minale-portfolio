@@ -42,17 +42,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToSection, onO
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Hero Text Column */}
-          <div className="lg:col-span-7 space-y-6 text-left">
+          <div className="lg:col-span-7 space-y-8 text-left">
             
-            {/* Main Headline */}
-            <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-                {PERSONAL_INFO.name}
+            {/* Main Headline - Simplified */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/60 text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2">
+                👋 Welcome
+              </div>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.05]">
+                I'm {PERSONAL_INFO.name.split(' ')[0]}
               </h1>
-              <h2 className="text-lg sm:text-xl font-semibold text-slate-700 dark:text-slate-300">
+              <p className="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-300">
                 {PERSONAL_INFO.title}
-              </h2>
-              <p className="text-base sm:text-lg font-medium text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+              </p>
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed font-normal">
                 {t.hero.bio}
               </p>
             </div>
@@ -155,12 +158,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onScrollToSection, onO
               </div>
 
               {/* Quick Info Header */}
-              <div className="text-center space-y-1">
-                <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">
-                  {PERSONAL_INFO.name}
-                </h3>
-                <p className="text-xs font-bold text-indigo-600 dark:text-indigo-400">
-                  {PERSONAL_INFO.title}
+              <div className="text-center space-y-2">
+                <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">
+                  Based in {PERSONAL_INFO.location.split('(')[0].trim()}
+                </p>
+                <p className="text-xs font-medium text-emerald-600 dark:text-emerald-400">
+                  {PERSONAL_INFO.status}
                 </p>
               </div>
 

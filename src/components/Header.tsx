@@ -98,12 +98,12 @@ export const Header: React.FC<HeaderProps> = ({
             />
             <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-slate-900" />
           </div>
-          <div className="text-left">
-            <span className="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white block leading-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-              Nigusu Minale
+          <div className="text-left hidden sm:block">
+            <span className="font-extrabold text-sm tracking-tight text-slate-900 dark:text-white block leading-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+              {PERSONAL_INFO.name.split(' ')[0]}
             </span>
-            <span className="text-[10px] font-extrabold text-indigo-600 dark:text-indigo-400 uppercase tracking-widest block mt-0.5">
-              Computer Engineer
+            <span className="text-[10px] font-extrabold text-slate-500 dark:text-slate-400 uppercase tracking-widest block mt-0.5">
+              Engineer
             </span>
           </div>
         </button>
