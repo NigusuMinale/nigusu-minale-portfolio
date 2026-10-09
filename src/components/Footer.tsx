@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal, ArrowUp, Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail, Heart, Send } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -22,21 +22,21 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
           
           {/* Brand Logo & Tagline */}
           <div className="flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 text-white flex items-center justify-center shadow-md">
-              <Terminal className="w-5 h-5 stroke-[2.5]" />
+            <div className="w-10 h-10 rounded-lg bg-slate-800 text-white flex items-center justify-center shadow-sm">
+              <Send className="w-5 h-5 stroke-[2.5]" />
             </div>
             <div>
-              <span className="font-extrabold text-lg text-white block leading-none">
+              <span className="font-bold text-lg text-white block leading-none">
                 {PERSONAL_INFO.name}
               </span>
-              <span className="text-[11px] font-bold text-indigo-400 block mt-0.5">
+              <span className="text-[11px] font-medium text-indigo-400 block mt-0.5">
                 {PERSONAL_INFO.title}
               </span>
             </div>
           </div>
 
           {/* Quick Section Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-bold text-slate-300">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-300">
             <button onClick={() => onScrollToSection('about')} className="hover:text-indigo-400 transition-colors">
               {t.nav.about}
             </button>
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
           {/* Back to Top */}
           <button
             onClick={scrollToTop}
-            className="p-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-all border border-slate-800 flex items-center gap-2 text-xs font-bold"
+            className="p-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white transition-all border border-slate-800 flex items-center gap-2 text-xs font-medium"
           >
             <span>Back to Top</span>
             <ArrowUp className="w-4 h-4" />

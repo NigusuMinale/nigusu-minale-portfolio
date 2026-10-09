@@ -4,8 +4,6 @@ import { useLanguage } from '../context/LanguageContext';
 import { 
   Code2, 
   Server, 
-  Sparkles, 
-  Terminal, 
   Layout, 
   CheckCircle2, 
   Cpu,
@@ -180,10 +178,8 @@ export const SkillsSection: React.FC = () => {
         return <Layout className="w-5 h-5 text-indigo-500" />;
       case 'Server':
         return <Server className="w-5 h-5 text-violet-500" />;
-      case 'Sparkles':
-        return <Sparkles className="w-5 h-5 text-amber-500" />;
       default:
-        return <Terminal className="w-5 h-5 text-emerald-500" />;
+        return <Code2 className="w-5 h-5 text-emerald-500" />;
     }
   };
 
@@ -206,7 +202,7 @@ export const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 md:py-28 bg-gradient-to-b from-white to-slate-50 dark:from-slate-950 dark:to-slate-900 relative">
+    <section id="skills" className="py-20 md:py-28 bg-white dark:bg-slate-950 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -217,10 +213,10 @@ export const SkillsSection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-3xl mx-auto space-y-3 mb-16"
         >
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 text-xs font-black uppercase tracking-widest">
-            <Cpu className="w-3.5 h-3.5" /> {t.nav.skills}
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-2">
+            {t.nav.skills}
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
             {t.sections.skillsTitle}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium">
@@ -230,41 +226,41 @@ export const SkillsSection: React.FC = () => {
 
         {/* Credentials & Specialization Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
-          <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
-            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-extrabold text-xs">
+          <div className="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
+            <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-medium text-xs">
               <GraduationCap className="w-4 h-4" /> Academic Standing
             </div>
-            <h4 className="text-sm font-extrabold text-slate-900 dark:text-white">4th Year Computer Engineering</h4>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">4th Year Computer Engineering</h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
               Specializing in Software Systems, Distributed Systems, and Cryptographic Security.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
-            <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-extrabold text-xs">
+          <div className="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
+            <div className="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-medium text-xs">
               <Award className="w-4 h-4" /> Udacity / EthioCoder
             </div>
-            <h4 className="text-sm font-extrabold text-slate-900 dark:text-white">Data Science & AI Programming</h4>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">Data Science & AI Programming</h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
               Certified in Python ML, Neural Networks, Prompt Engineering, and Gemini API integration.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
-            <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+          <div className="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
+            <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium text-xs">
               <ShieldCheck className="w-4 h-4" /> Safaricom & Gebeya
             </div>
-            <h4 className="text-sm font-extrabold text-slate-900 dark:text-white">Data Security & Full Stack</h4>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">Data Security & Full Stack</h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
               Certified in secure web development, API encryption standards, and enterprise deployment.
             </p>
           </div>
 
-          <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
-            <div className="flex items-center gap-2 text-violet-600 dark:text-violet-400 font-extrabold text-xs">
+          <div className="p-5 rounded-lg bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 space-y-2">
+            <div className="flex items-center gap-2 text-violet-600 dark:text-violet-400 font-medium text-xs">
               <Lock className="w-4 h-4" /> INSA Cyber Talent & PKI
             </div>
-            <h4 className="text-sm font-extrabold text-slate-900 dark:text-white">Cyber Security & DevSecOps</h4>
+            <h4 className="text-sm font-bold text-slate-900 dark:text-white">Cyber Security & DevSecOps</h4>
             <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
               INSA Cyber Talent member & PKI Development & Operations intern creating secure crypto protocols.
             </p>
@@ -280,18 +276,18 @@ export const SkillsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.45, delay: idx * 0.1 }}
-              className="p-6 sm:p-8 rounded-3xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 space-y-6 shadow-xs"
+              className="p-6 sm:p-8 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/90 dark:border-slate-700/80 space-y-6 shadow-sm"
             >
               {/* Category Title */}
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-white dark:bg-slate-900 shadow-xs border border-slate-200 dark:border-slate-700">
+                <div className="p-3 rounded-lg bg-white dark:bg-slate-900 shadow-sm border border-slate-200 dark:border-slate-700">
                   {getCategoryIcon(cat.iconName)}
                 </div>
                 <div>
-                  <h3 className="text-lg font-extrabold text-slate-900 dark:text-white">
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">
                     {cat.title}
                   </h3>
-                  <p className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                  <p className="text-xs font-medium text-slate-500 dark:text-slate-400">
                     {cat.skills.length} core competencies
                   </p>
                 </div>
@@ -322,17 +318,14 @@ export const SkillsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
-          className="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 border border-slate-800 shadow-2xl relative overflow-hidden space-y-8"
+          className="rounded-xl bg-slate-900 text-white p-6 sm:p-8 border border-slate-800 shadow-md relative overflow-hidden space-y-8"
         >
-          {/* Subtle Ambient Background */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
-
           {/* Widget Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-6 relative z-10">
             <div className="space-y-1">
               <div className="flex items-center gap-2">
                 <Github className="w-5 h-5 text-indigo-400" />
-                <h3 className="text-xl font-extrabold tracking-tight">Live GitHub Statistics & Repositories</h3>
+                <h3 className="text-xl font-bold tracking-tight">Live GitHub Statistics & Repositories</h3>
               </div>
               <p className="text-xs text-slate-400 font-medium">
                 Live repository statistics and active public code commits fetched from GitHub API (@nigusuminale).
@@ -342,7 +335,7 @@ export const SkillsSection: React.FC = () => {
             <button
               onClick={fetchGitHubData}
               disabled={loading}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-extrabold text-slate-200 transition-colors border border-slate-700 disabled:opacity-50 shrink-0 self-start sm:self-auto"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-medium text-slate-200 transition-colors border border-slate-700 disabled:opacity-50 shrink-0 self-start sm:self-auto"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin text-indigo-400' : ''}`} />
               <span>{loading ? 'Fetching...' : 'Sync Live Data'}</span>
@@ -351,30 +344,30 @@ export const SkillsSection: React.FC = () => {
 
           {/* User Profile Key Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 relative z-10">
-            <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-1">
-              <p className="text-[10px] uppercase font-black tracking-wider text-slate-400">Public Repos</p>
-              <p className="text-2xl font-black text-white font-mono">
+            <div className="p-4 rounded-lg bg-slate-800/80 border border-slate-700/80 space-y-1">
+              <p className="text-[10px] uppercase font-medium tracking-wider text-slate-400">Public Repos</p>
+              <p className="text-2xl font-bold text-white font-mono">
                 {githubStats ? githubStats.publicRepos : '--'}
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-1">
-              <p className="text-[10px] uppercase font-black tracking-wider text-slate-400">GitHub Followers</p>
-              <p className="text-2xl font-black text-amber-400 font-mono">
+            <div className="p-4 rounded-lg bg-slate-800/80 border border-slate-700/80 space-y-1">
+              <p className="text-[10px] uppercase font-medium tracking-wider text-slate-400">GitHub Followers</p>
+              <p className="text-2xl font-bold text-amber-400 font-mono">
                 {githubStats ? githubStats.followers : '--'}
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-1">
-              <p className="text-[10px] uppercase font-black tracking-wider text-slate-400">Primary Stack</p>
-              <p className="text-sm font-extrabold text-indigo-400">
+            <div className="p-4 rounded-lg bg-slate-800/80 border border-slate-700/80 space-y-1">
+              <p className="text-[10px] uppercase font-medium tracking-wider text-slate-400">Primary Stack</p>
+              <p className="text-sm font-bold text-indigo-400">
                 Java / Spring Boot & TS
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-1">
-              <p className="text-[10px] uppercase font-black tracking-wider text-slate-400">DevSecOps Status</p>
-              <p className="text-sm font-extrabold text-emerald-400 flex items-center gap-1">
+            <div className="p-4 rounded-lg bg-slate-800/80 border border-slate-700/80 space-y-1">
+              <p className="text-[10px] uppercase font-medium tracking-wider text-slate-400">DevSecOps Status</p>
+              <p className="text-sm font-bold text-emerald-400 flex items-center gap-1">
                 <CheckCircle2 className="w-3.5 h-3.5" /> Active INSA PKI
               </p>
             </div>
@@ -388,14 +381,14 @@ export const SkillsSection: React.FC = () => {
 
           {/* Repositories Cards Grid */}
           <div className="space-y-4 relative z-10">
-            <h4 className="text-xs font-black uppercase tracking-wider text-slate-400 flex items-center gap-2">
+            <h4 className="text-xs font-medium uppercase tracking-wider text-slate-400 flex items-center gap-2">
               <Layers className="w-3.5 h-3.5 text-indigo-400" /> Recent Public Repositories & Open Source Work
             </h4>
 
             {loading ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[1, 2, 3, 4].map((n) => (
-                  <div key={n} className="h-32 rounded-2xl bg-slate-800/50 animate-pulse border border-slate-700/50" />
+                  <div key={n} className="h-32 rounded-lg bg-slate-800/50 animate-pulse border border-slate-700/50" />
                 ))}
               </div>
             ) : (
@@ -406,11 +399,11 @@ export const SkillsSection: React.FC = () => {
                     href={repo.htmlUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="group p-5 rounded-2xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/70 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between space-y-3"
+                    className="group p-5 rounded-lg bg-slate-800/60 hover:bg-slate-800 border border-slate-700/70 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between space-y-3"
                   >
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
-                        <span className="font-extrabold text-sm text-indigo-300 group-hover:text-white transition-colors flex items-center gap-1.5">
+                        <span className="font-bold text-sm text-indigo-300 group-hover:text-white transition-colors flex items-center gap-1.5">
                           <Code2 className="w-4 h-4 text-indigo-400" />
                           <span className="truncate max-w-[220px]">{repo.name}</span>
                         </span>
@@ -422,9 +415,9 @@ export const SkillsSection: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-[11px] font-bold">
+                    <div className="flex items-center justify-between pt-2 border-t border-slate-800/80 text-[11px] font-medium">
                       {repo.language && (
-                        <span className={`px-2 py-0.5 rounded-md border text-[10px] font-black uppercase ${getLanguageColor(repo.language)}`}>
+                        <span className={`px-2 py-0.5 rounded-md border text-[10px] font-medium uppercase ${getLanguageColor(repo.language)}`}>
                           {repo.language}
                         </span>
                       )}
@@ -447,7 +440,7 @@ export const SkillsSection: React.FC = () => {
           </div>
 
           {/* Footer Action inside GitHub Box */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/80 relative z-10 text-xs font-semibold">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-800/80 relative z-10 text-xs font-medium">
             <span className="text-slate-400">
               {lastFetched ? `Last synchronized: ${lastFetched.toLocaleTimeString()}` : 'Connected to GitHub API'}
             </span>
@@ -455,7 +448,7 @@ export const SkillsSection: React.FC = () => {
               href="https://github.com/nigusuminale"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 font-extrabold group"
+              className="inline-flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 font-bold group"
             >
               <span>View full GitHub profile @nigusuminale</span>
               <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { LanguageProvider } from './context/LanguageContext';
 import { ToastProvider } from './context/ToastContext';
 import { Header } from './components/Header';
@@ -13,112 +13,102 @@ import { ResumeModal } from './components/ResumeModal';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('nigusu_theme');
-      if (saved) return saved === 'dark';
-      return false; // Default to light mode
-    }
-    return false;
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    
+    const saved = localStorage.getItem('nigusu_theme');
+    return saved === 'dark';
   });
 
-  const [activeSection, setActiveSection] = useState<string>('about');
-  const [resumeModalOpen, setResumeModalOpen] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState('about');
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
 
-  // Sync dark mode class with html root element
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('nigusu_theme', 'dark');
-    } else {
+    if (!darkMode) {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('nigusu_theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('nigusu_theme', 'dark');
     }
   }, [darkMode]);
 
-  // Intersection observer for active navigation highlighting
   useEffect(() => {
+    const sections = ['about', 'projects', 'skills', 'certificates', 'copilot', 'experience', 'contact'];
+    
     const handleScroll = () => {
-      const sections = ['about', 'projects', 'skills', 'certificates', 'copilot', 'experience', 'contact'];
-      const scrollPos = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 100;
 
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
+      sections.forEach(sectionId => {
+        const element = document.getElementById(sectionId);
+        if (!element) return;
+
+        const { offsetTop, offsetHeight } = element;
+        const sectionTop = offsetTop;
+        const sectionBottom = offsetTop + offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveSection(sectionId);
         }
-      }
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleScrollToSection = (id: string) => {
-    setActiveSection(id);
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -80;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
+  const scrollToSection = (sectionId: string) => {
+    setActiveSection(sectionId);
+    
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+
+    const offsetTop = element.getBoundingClientRect().top + window.scrollY;
+    const targetScroll = offsetTop - 80;
+
+    window.scrollTo({
+      top: targetScroll,
+      behavior: 'smooth',
+    });
   };
 
   return (
     <LanguageProvider>
       <ToastProvider>
-        <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors selection:bg-indigo-500 selection:text-white">
-          
-          {/* Top Navigation */}
+        <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
           <Header
             darkMode={darkMode}
             setDarkMode={setDarkMode}
             onOpenResume={() => setResumeModalOpen(true)}
-            onScrollToSection={handleScrollToSection}
+            onScrollToSection={scrollToSection}
             activeSection={activeSection}
           />
 
-          {/* Main Content Sections */}
-          <main>
-            {/* About & Hero Banner */}
+          <main className="flex flex-col">
             <HeroSection
-              onScrollToSection={handleScrollToSection}
+              onScrollToSection={scrollToSection}
               onOpenResume={() => setResumeModalOpen(true)}
             />
 
-            {/* Featured Projects & Case Studies */}
             <ProjectsSection />
 
-            {/* Technical Skills & Stack Matrix */}
             <SkillsSection />
 
-            {/* Verified Certificates & Credentials */}
             <CertificatesSection />
 
-            {/* Gemini AI Copilot Chat */}
             <AICopilotSection />
 
-            {/* Experience, Education & Career Timeline */}
             <ExperienceSection />
 
-            {/* Contact Form & Direct Details */}
             <ContactSection />
           </main>
 
-          {/* Footer */}
-          <Footer onScrollToSection={handleScrollToSection} />
+          <Footer onScrollToSection={scrollToSection} />
 
-          {/* Resume Overlay Modal */}
           <ResumeModal
             isOpen={resumeModalOpen}
             onClose={() => setResumeModalOpen(false)}
           />
-
         </div>
       </ToastProvider>
     </LanguageProvider>
