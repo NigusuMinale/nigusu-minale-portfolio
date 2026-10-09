@@ -272,7 +272,7 @@ export const ProjectsSection: React.FC = () => {
                     <div className="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-3 backdrop-blur-xs">
                       <button
                         onClick={() => setActiveProjectModal(project)}
-                        className="px-4 py-2 rounded-xl bg-white text-slate-900 font-extrabold text-xs shadow-lg flex items-center gap-1.5 hover:scale-105 transition-transform"
+                        className="px-4 py-2 rounded-xl bg-white text-slate-900 font-extrabold text-xs shadow-lg flex items-center gap-1.5 transition-transform"
                       >
                         <Eye className="w-3.5 h-3.5 text-indigo-600" />
                         <span>View Case Study</span>

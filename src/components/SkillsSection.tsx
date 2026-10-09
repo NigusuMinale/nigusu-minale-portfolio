@@ -297,35 +297,18 @@ export const SkillsSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Skills Progress List */}
-              <div className="space-y-4">
+              {/* Skills Pills */}
+              <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-1.5">
-                    <div className="flex items-center justify-between text-xs font-bold">
-                      <span className="flex items-center gap-1.5 text-slate-800 dark:text-slate-200">
-                        {skill.name}
-                        {skill.highlight && (
-                          <span className="px-1.5 py-0.2 rounded-md bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 text-[9px] font-black uppercase">
-                            Core
-                          </span>
-                        )}
-                      </span>
-                      <span className="text-slate-500 font-mono text-[11px]">
-                        {skill.experienceYears}
-                      </span>
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, ease: 'easeOut' }}
-                        className="h-full rounded-full bg-gradient-to-r from-indigo-600 via-violet-600 to-amber-500"
-                      />
-                    </div>
-                  </div>
+                  <span
+                    key={skill.name}
+                    className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-medium border border-slate-200 dark:border-slate-600"
+                  >
+                    {skill.name}
+                    {skill.highlight && (
+                      <span className="ml-1.5 text-indigo-600 dark:text-indigo-400 font-bold">★</span>
+                    )}
+                  </span>
                 ))}
               </div>
 
@@ -350,9 +333,6 @@ export const SkillsSection: React.FC = () => {
               <div className="flex items-center gap-2">
                 <Github className="w-5 h-5 text-indigo-400" />
                 <h3 className="text-xl font-extrabold tracking-tight">Live GitHub Statistics & Repositories</h3>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-black uppercase border border-emerald-500/30">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" /> Real-Time Sync
-                </span>
               </div>
               <p className="text-xs text-slate-400 font-medium">
                 Live repository statistics and active public code commits fetched from GitHub API (@nigusuminale).
@@ -483,26 +463,6 @@ export const SkillsSection: React.FC = () => {
           </div>
 
         </motion.div>
-
-        {/* Stack Consultation Callout */}
-        <div className="mt-12 p-6 rounded-3xl bg-gradient-to-r from-indigo-900 via-slate-900 to-indigo-950 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div className="space-y-1 text-center md:text-left">
-            <h4 className="font-extrabold text-base flex items-center justify-center md:justify-start gap-2">
-              <Sparkles className="w-4 h-4 text-amber-400" />
-              Need a Custom Java Spring Boot or Full-Stack Architecture?
-            </h4>
-            <p className="text-xs text-indigo-200">
-              Nigusu is adaptable to your engineering standards, Spring Boot microservices, PKI security auditing, and cloud pipelines.
-            </p>
-          </div>
-
-          <a
-            href="mailto:nigusuminale@gmail.com"
-            className="px-6 py-3 rounded-2xl bg-white text-indigo-950 font-extrabold text-xs hover:bg-slate-100 transition-all shadow-md shrink-0"
-          >
-            Request Architecture Consultation
-          </a>
-        </div>
 
       </div>
     </section>

@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="w-10 h-10 rounded-full object-cover ring-2 ring-indigo-600 dark:ring-indigo-400 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300"
               referrerPolicy="no-referrer"
             />
-            <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-slate-900 animate-pulse" />
+            <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 ring-2 ring-white dark:ring-slate-900" />
           </div>
           <div className="text-left">
             <span className="font-extrabold text-sm sm:text-base tracking-tight text-slate-900 dark:text-white block leading-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
@@ -167,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Hire Me CTA */}
           <button
             onClick={() => handleNavClick('contact')}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md shadow-indigo-600/25 transition-all hover:scale-105"
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs shadow-md shadow-indigo-600/25 transition-all"
           >
             <Briefcase className="w-3.5 h-3.5" />
             <span>{t.nav.hireMe}</span>

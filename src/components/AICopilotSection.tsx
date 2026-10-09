@@ -132,7 +132,7 @@ export const AICopilotSection: React.FC = () => {
               <div>
                 <h3 className="font-extrabold text-sm flex items-center gap-2">
                   <span>Nigusu's AI Copilot</span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
                 </h3>
                 <p className="text-[10px] text-slate-400 font-mono">
                   gemini-3.6-flash • server-side wrapper

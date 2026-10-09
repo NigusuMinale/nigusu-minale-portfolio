@@ -54,28 +54,28 @@ const translations: Record<Language, Translations> = {
       hireMe: 'Hire Nigusu'
     },
     hero: {
-      status: '🟢 Open for Engineering Roles & High-Impact Consulting',
+      status: 'Open to opportunities in software engineering',
       role: 'Computer Engineer | Full-Stack & AI Software Developer',
       greeting: "Hello, I'm Nigusu Minale",
       location: 'Bahir Dar, Ethiopia (Open to Remote Worldwide)',
       viewProjects: 'View Projects',
       contactMe: 'Contact Me',
       downloadCV: 'Download Resume',
-      bio: '4th-Year Computer Engineering candidate specializing in Cyber Security, PKI Infrastructure, Full-Stack TypeScript/React, Java Spring Boot, and AI Engineering.'
+      bio: '4th-year Computer Engineering student. Interning in PKI Development & Operations at INSA, building full-stack web apps and working on cryptographic security systems.'
     },
     sections: {
-      projectsTitle: 'Featured Engineering Projects',
-      projectsSub: 'Production-ready applications spanning PKI Security, Skill Sharing, Event Systems, Job Portals, and AI Workflows.',
-      skillsTitle: 'Technical Skills & Architecture',
-      skillsSub: 'Comprehensive technical competencies in Full-Stack Web, Cyber Security, PKI, AI Models, and Microservices.',
-      certTitle: 'Official Certificates & Credentials',
-      certSub: 'Verified credentials in Data Science, AI Programming, Cyber Security, Full-Stack Development, and INSA PKI DevSecOps.',
-      copilotTitle: 'Ask Gemini AI Copilot',
-      copilotSub: 'Interactive AI assistant trained on Nigusu Minale’s engineering background, projects, and tech stack.',
-      experienceTitle: 'Experience, Fellowship & Education',
-      experienceSub: 'Career journey spanning INSA PKI DevSecOps, Cyber Talent Group, Full-Stack Engineering, and Computer Engineering candidate at Higher Education Faculty.',
-      contactTitle: 'Send Message Directly to My Inbox',
-      contactSub: 'Powered by EmailJS & Nodemailer API. Messages are automatically delivered to nigusuminale@gmail.com.'
+      projectsTitle: 'Projects',
+      projectsSub: 'Full-stack projects spanning security, platforms, and AI integrations.',
+      skillsTitle: 'Technical Skills',
+      skillsSub: 'Languages, frameworks, and tools I work with regularly.',
+      certTitle: 'Certifications',
+      certSub: 'Formal credentials from industry programs.',
+      copilotTitle: 'Ask the AI Copilot',
+      copilotSub: 'An AI assistant that can answer questions about my background and projects.',
+      experienceTitle: 'Experience & Education',
+      experienceSub: 'Internship at INSA, fellowship with the Cyber Talent Group, and studies in Computer Engineering.',
+      contactTitle: 'Get in Touch',
+      contactSub: 'Send a message directly — responses typically within 24 hours.'
     }
   },
   am: {
