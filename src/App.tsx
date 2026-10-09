@@ -17,9 +17,9 @@ export default function App() {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('nigusu_theme');
       if (saved) return saved === 'dark';
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return false; // Default to light mode
     }
-    return true;
+    return false;
   });
 
   const [activeSection, setActiveSection] = useState<string>('about');

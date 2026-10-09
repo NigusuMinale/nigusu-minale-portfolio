@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@layer base {
+  /* Light mode defaults */
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    @apply bg-white text-slate-900;
+  }
+  
+  /* Dark mode overrides */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .dark body {
+    @apply bg-slate-950 text-slate-50;
+  }
+}
+
+/* Smooth theme transitions */
+html, body, * {
+  @apply transition-colors duration-300;
+}
