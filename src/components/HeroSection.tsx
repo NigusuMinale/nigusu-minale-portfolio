@@ -18,7 +18,7 @@ export function HeroSection({ onScrollToSection, onOpenResume }: HeroSectionProp
   };
 
   return (
-    <section id="about" className="py-24 md:py-32 relative bg-white dark:bg-slate-950">
+    <section id="about" className="py-24 md:py-32 relative bg-white dark:bg-slate-950 bg-hero-circuit">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           

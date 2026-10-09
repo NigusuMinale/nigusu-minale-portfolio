@@ -75,7 +75,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <ToastProvider>
-        <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans transition-colors duration-200 selection:bg-indigo-500 selection:text-white">
+        <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans selection:bg-indigo-500 selection:text-white">
           <Header
             darkMode={darkMode}
             setDarkMode={setDarkMode}

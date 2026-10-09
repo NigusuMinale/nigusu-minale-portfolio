@@ -202,7 +202,7 @@ export const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="py-20 md:py-28 bg-white dark:bg-slate-950 relative">
+    <section id="skills" className="py-20 md:py-28 bg-white dark:bg-slate-950 bg-skills-particles relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}

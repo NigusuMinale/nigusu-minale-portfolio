@@ -102,7 +102,7 @@ export const AICopilotSection: React.FC = () => {
   };
 
   return (
-    <section id="copilot" className="py-20 md:py-28 bg-white dark:bg-slate-950 relative">
+    <section id="copilot" className="py-20 md:py-28 bg-white dark:bg-slate-950 bg-copilot-glow relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}

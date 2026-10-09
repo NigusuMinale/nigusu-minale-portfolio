@@ -18,7 +18,7 @@ export const ExperienceSection: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string>('exp-1');
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-slate-900 relative">
+    <section id="experience" className="py-20 bg-white dark:bg-slate-900 bg-experience-data relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}

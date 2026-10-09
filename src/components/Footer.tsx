@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ onScrollToSection }) => {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 relative">
+    <footer className="bg-slate-950 text-slate-400 py-12 border-t border-slate-900 relative bg-footer-matrix">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
